@@ -19,10 +19,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lisa Meijers
 
   #### Je startniveau:
-  blauw
+  Blauw
 
   #### Je focus:
-  surface plane
+  Surface plane
  
 </details>
 
@@ -88,17 +88,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  <img src="readme-images/marquee1.png" width="375px" alt="Foto van de marquee tekst in de header"> 
+ Het werken met de marquee ging goed. Ik heb gekeken naar hoe je in de marquee een bepaalde stijling kan geven van 
+<img src="readme-images/marquee2.png" width="375px" alt="Foto van de marquee code in de header"> 
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Lisa           | Laura              | Sander       | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  |Nav Bar         | 3 buttons stijl    | en ik dit    | en dan ik dat    |
+  |Foto knop slide | Haai met nummers   | nog een punt | dit wil ik zeker |
+  |                | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
