@@ -78,13 +78,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="menu.png" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/menu.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="photoscroll.png" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/photoscroll.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -119,7 +119,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Nav menu kijken we nog even samen naar, ik en de student assistent.
   - In de marquee degene met de hoofdletters normaal schrijven.
   - 3 css paginas. Style.css voor de algemene, index.css voor de homepage en aboutus.css voor de about us pagina.
-  - Hamburger menu als button in de nav. Ook met een button:active. Of doe 3 lijjnen maken en geef ze een leuke animatie in javascript.
+  - Hamburger menu als button in de nav. Ook met een button:active. Of doe 3 lijnen maken en geef ze een leuke animatie in javascript.
 
 </details>
 
