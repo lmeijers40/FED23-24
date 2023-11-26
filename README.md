@@ -58,6 +58,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
 
+  -De tekst aan de bovenkant in de pagina kun je niet snel weg van met de screenreader.
+  -Chrome plugin, Colorblindly, kun je gebruiken om te zien hoe mensen die kleurenblind jou pagina evaren.
+  -De imgs hebben geen alt attribute.
+  -Headings zijn niet gebruikt om een element te introduceren.
+  -De slideshow kan niet gepauzeerd worden (foto's)
+  -Dark en light mode worden niet gesupport op de pagina van Glow Recipe.
+  -Hetzelfde geld voor high-contrast mode.
+  -Geen custom::selection colors gebruikt.
+
+
 </details>
 
 
@@ -68,13 +78,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="menu.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="photoscroll.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -96,20 +106,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Lisa           | Laura              | Sander       | student 4        |
-  | ---            | ---                | ---          | ---              |
-  |Nav Bar         | 3 buttons stijl    | en ik dit    | en dan ik dat    |
-  |Foto knop slide | Haai met nummers   | nog een punt | dit wil ik zeker |
-  |                | ...                | ...          | ...              |
+  | Lisa           | Laura              | Sander             | Kayane           |
+  | ---            | ---                | ---                | ---              |
+  |Nav Bar         | 3 buttons stijl    | Margin en padding  | en dan ik dat    |
+  |Css paginas?    | Haai met nummers   | Semantisch correct?| dit wil ik zeker |
+  |...             | ...                | ...                | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Nav menu kijken we nog even samen naar, ik en de student assistent.
+  - In de marquee degene met de hoofdletters normaal schrijven.
+  - 3 css paginas. Style.css voor de algemene, index.css voor de homepage en aboutus.css voor de about us pagina.
+  - Hamburger menu als button in de nav. Ook met een button:active. Of doe 3 lijjnen maken en geef ze een leuke animatie in javascript.
 
 </details>
 
