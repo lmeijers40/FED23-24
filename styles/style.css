@@ -1,31 +1,36 @@
 @font-face {
-	font-family: 'CeraGR-Regular';
-	src: url('CeraGR-Regular.ttf') format('ttf');
+	font-family: 'CeraGR';
+	src: url('../fonts/CeraGR-Regular.ttf') format('truetype');
+	font-weight:400;
 }
 
 @font-face {
-	font-family: 'CeraPro-Light';
-	src: url('CeraPro-Light.ttf') format('ttf');
+	font-family: 'CeraGR';
+	src: url('../fonts/CeraGR-Bold.ttf') format('truetype');
+	font-weight:700;
 }
 
 @font-face {
-	font-family: 'CeraGR-Bold';
-	src: url('CeraGR-Regular.ttf') format('ttf');
+	font-family: 'CeraPro';
+	src: url('../fonts/CeraPro-Light.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham-Bold.ttf') format('truetype');
+	font-weight:700;
 }
 
 @font-face {
-	font-family: 'Gotham-Bold';
-	src: url('Gotham-Bold.ttf') format('ttf');
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham-Book.ttf') format('truetype');
+	font-weight:400;
 }
 
 @font-face {
-	font-family: 'Gotham-Book';
-	src: url('Gotham-Book.ttf') format('ttf');
-}
-
-@font-face {
-	font-family: 'Playfair Display';
-	src: url('Playfair-Display.ttf') format('ttf');
+	font-family: 'Playfair-Display';
+	src: url('../fonts/Playfair-Display.ttf') format('truetype');
 }
 
 /**************/
@@ -41,6 +46,12 @@
 * {
 	margin: 0;
 	padding: 0;
+
+}
+
+img {
+	width: 100%;
+	height: auto;
 }
 
 /*********************/
@@ -54,15 +65,29 @@
 	--color-background: #FBF5FA;
 }
 
+
+body {
+	background-color: var(--color-background);
+	font-family: 'Playfair-Display', cursive;
+}
+
 /****************/
 /* JOUW STYLING */
 /****************/
 
 /* jouw code */
+main {
+	display: flex;
+    flex-direction: column;
+    gap: 1em; 
+}
 
+li {
+	list-style: none;
+}
 
 marquee {	
-font-family: CeraPro-Light;
+font-family: CeraPro, sans-serif;
 font-size: .7em;
 }
 
@@ -72,7 +97,6 @@ marquee ul {
 	list-style:none;
 	padding:0;
 	margin:0;
-	
   }
   
   marquee strong {
@@ -80,48 +104,656 @@ marquee ul {
 	text-transform:uppercase;
   }
 
-body {
-	background-color: var(--color-background);
-	font-family: Playfair Display;
+header nav{
+	background-color: white;
+	display:grid;
+	grid-template-columns:1fr max-content 1fr;
+	align-items: center;
+	height: 3em;
 }
 
+/* logo */
+header nav > a {
+	height:.75em;
+	display:block;
+}
 
-h3 {
-	font-family: CeraGR-Regular;
-	font-size: .6em;
+header nav > a img {
+	height:100%;
+	display:block;
+}
+
+/* menu button */
+header nav > button {
+	width:2em;
+	aspect-ratio: 1/1;
+	order:-1;
+
+	display: grid;
+	place-items: center;
+}
+
+header nav > button img {
+	width:1em;
+	display:block;
+}
+
+header nav ul {
+	display: flex;
+	align-items: center;
+	justify-self: end;
 }
 
 header nav ul li {
+	height: 2em;
+	aspect-ratio: 1/1;
+	display: grid;
+	place-items: center;
+}
+
+header nav ul li button,
+header nav ul li a {
+	font-size: 1em;
+}
+
+header nav ul li img {
+	height:1em;
+	display:block;
+}
+
+nav button {
+background-color: var(--color-white);
+border: none;	
+}
+
+/*eerste 3 fotos*/
+main section:nth-of-type(1) {
+	width: 100%;
+	max-width: 800px;
+	height: 450px;
+	position: relative;
+	overflow: hidden; /* <===  */
+  }
+  
+main section:nth-of-type(1) ul{
+	  list-style-type: none;
+  }
+  
+main section:nth-of-type(1) ul li {
+	width: 100%;
+	max-width: 800px;
+	height: 350px;
+	position: absolute;
+	transition: all 0.5s;
+  }
+  
+main section:nth-of-type(1) ul li img {
+	width: 100%;
+	height: fit-content;
+	object-fit: cover;
+	border-radius: 0;
+
+  }
+  
+main section:nth-of-type(1) p button {
+	position: absolute;
+	background-color: transparent;
+	border: none;
+	/*zorgt dat alles bovenop de laag gaat komen*/
+	z-index: 10;
+	cursor: pointer;
+	font-size: 3em;
+	color: var(--color-white);
+	font-family: CeraGR;
+
+  }
+  
+main section:nth-of-type(1) .btn:active {
+	transform: scale(1.1);
+  }
+
+main section:nth-of-type(1) p button:nth-of-type(1) {
+   top: 45%;
+	right: 2%; 
+  }
+  
+main section:nth-of-type(1) p button:nth-of-type(2) {
+	  top: 45%;
+	left: 2%;
+  }
+  /*einde fotos slider*/
+
+section:nth-of-type(2) p {
+	display: none;
+}
+
+h3 {
+	font-family: CeraGR;
+	font-weight: 400;
+	font-size: .8em;
+}
+
+
+header section ul li {
 	list-style: none;
 	background-color: #F9EDF7;
-	height: 5em;
+	height: 3em;
 	display: flex;
 	align-items: center;
 }
 
-main section:nth-of-type(1) ul  {
-	display: flex;
-	list-style: none;
+main section:nth-of-type(1) {
+	position: relative;
 }
 
-main section:nth-of-type(1) ul li {
+main section:nth-of-type(1) ul li button {
+	position: absolute;
+	text-align: center;
+
+
+	padding: 1.5em;
+	height: 2em;
+	left: 5em;
+	right: 5em;
+	bottom: -6em;
+
+	line-height: .2em;
+
+	background-color: var(--color-white);
+	border: solid .20em black;
+	font-family: CeraGR, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+
+}
+
+
+
+main section:nth-of-type(3) {
+	margin: 1em;
+}
+
+main section:nth-of-type(3) ul  {
+	display: flex;
+	list-style: none;
+
+	 /* nieuwe code test */
+	width: 100%;
+
+
+ /* nieuwe code test */
+
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	gap: 1em;
+}
+
+main section:nth-of-type(3) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(3) ul li {
 	list-style: none;
 	background-color: var(--color-white);
 	padding: 0.75em;
-	border-radius: 1em;
-	margin: 0.75em;
-	flex-direction: column;
+	border-radius: .5em;
+	flex-direction: column; 
 	display:flex;
 	gap:1em ;
+
+	width: 100px;
+	flex-shrink: 0;
+
+	height: 10em;
+	
+
+
+	/* nieuwe code */
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
 }
+
 
 ul li h3 {
 	text-transform: uppercase;
 }
 
-ul li img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 1em;
+main ul li img {
+	border-radius: .5em;
 	order:-1;
 }
+
+main section:nth-of-type(4) {
+	margin: 1em;
+}
+
+main section:nth-of-type(4) ul  {
+	display: flex;
+	list-style: none;
+
+	 /* nieuwe code test */
+	width: 100%;
+
+
+ /* nieuwe code test */
+
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	gap: 1em;
+}
+
+main section:nth-of-type(4) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(4) ul li {
+	list-style: none;
+	border-radius: .5em;
+	flex-direction: column; 
+	display:flex;
+	gap: .1em;
+	position: relative;
+	width: 150px;
+	flex-shrink: 0;
+
+	margin-bottom: 4em;
+
+	
+	
+
+
+	/* nieuwe code */
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
+}
+
+main section:nth-of-type(4) ul li h3{
+	margin-top: .5em;
+	font-family: CeraGR, sans-serif;
+	font-weight: bold;
+	text-transform: none;
+}
+
+main section:nth-of-type(4) ul li p{
+	font-family: CeraGR, sans-serif;
+	font-size: .7em;
+	right: 0.3em;
+	top: 0.5em;
+	background-color: white;
+	padding-left: .8em;
+	padding-right: .8em;
+	padding-top: .3em;
+	padding-bottom: .3em;
+	font-weight: bold;
+	text-transform: none;
+	position: absolute;
+}
+
+main section:nth-of-type(4) ul li button{
+	position: absolute;
+	font-family: CeraGR, sans-serif;
+	margin-top: 22em;
+	font-size: .7em;
+	padding: 1.2em;
+	width: 150px;
+	word-spacing: .8em;
+	border-color: black;
+	background-color: white;
+	font-weight: bold;
+	text-transform: none;
+	border-radius: .5em;
+}
+
+main section:nth-of-type(4) ul li span {
+	font-family: CeraGR, sans-serif;
+	color: lightgray;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: none;
+	text-decoration: line-through;
+	
+}
+
+main section:nth-of-type(5) {
+	position: relative;
+	margin-bottom: 2em;
+}
+
+main section:nth-of-type(5) button {
+	position: absolute;
+	text-align: center;
+
+
+	padding: 1.5em;
+	height: 2em;
+	left: 5em;
+	right: 5em;
+	bottom: 2em;
+
+	line-height: .2em;
+
+	background-color: var(--color-white);
+	border: solid .20em black;
+	font-family: CeraGR, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+
+}
+
+main section:nth-of-type(6) ul  {
+	display: flex;
+	list-style: none;
+
+	 /* nieuwe code test */
+	width: 100%;
+
+
+ /* nieuwe code test */
+
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	gap: 1em;
+	margin-bottom: 1em;
+}
+
+main section:nth-of-type(6) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(6) ul li {
+	list-style: none;
+	border-radius: .5em;
+	flex-direction: column; 
+	display:flex;
+	gap: .1em;
+	position: relative;
+	width: 150px;
+	flex-shrink: 0;
+
+	margin-bottom: 4em;
+
+	
+	
+
+
+	/* nieuwe code */
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
+}
+
+main section:nth-of-type(6) ul li h3{
+	margin-top: .5em;
+	font-family: CeraGR, sans-serif;
+	font-weight: bold;
+	text-transform: none;
+}
+
+main section:nth-of-type(6) ul li p{
+	font-family: CeraGR, sans-serif;
+	font-size: .7em;
+	right: 0.3em;
+	top: 0.5em;
+	background-color: white;
+	padding: 0.3em 0.8em;
+	font-weight: bold;
+	text-transform: none;
+	position: absolute;
+}
+
+main section:nth-of-type(6) ul li button{
+	position: absolute;
+	font-family: CeraGR, sans-serif;
+	margin-top: 22em;
+	font-size: .7em;
+	padding: 1.2em;
+	width: 150px;
+	word-spacing: .8em;
+	border-color: black;
+	background-color: white;
+	font-weight: bold;
+	text-transform: none;
+	border-radius: .5em;
+}
+
+main section:nth-of-type(6) ul li span {
+	font-family: CeraGR, sans-serif;
+	color: lightgray;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: none;
+	text-decoration: line-through;
+}
+
+main section:nth-of-type(7) {
+	position: relative;
+	margin-bottom: 2em;
+}
+
+
+main section:nth-of-type(7) button {
+	position: absolute;
+	text-align: center;
+
+
+	padding: 1.5em;
+	height: 2em;
+	left: 4.7em;
+	right: 4.7em;
+	bottom: 1.4em;
+
+	line-height: .2em;
+
+	background-color: var(--color-white);
+	border: solid .20em black;
+	font-family: CeraGR, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+
+}
+
+/*tekst op foto screenreader*/
+section:nth-of-type(8) p {
+	display: none;
+}
+
+main section:nth-of-type(9) ul  {
+	display: flex;
+	list-style: none;
+
+	 /* nieuwe code test */
+	width: 100%;
+
+
+ /* nieuwe code test */
+
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	gap: 1em;
+	margin-bottom: 1em;
+}
+
+main section:nth-of-type(9) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(9) ul li {
+	list-style: none;
+	border-radius: .5em;
+	flex-direction: column; 
+	display:flex;
+	gap: .1em;
+	position: relative;
+	width: 150px;
+	flex-shrink: 0;
+
+	margin-bottom: 4em;
+
+	
+	
+
+
+	/* nieuwe code */
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
+}
+
+main section:nth-of-type(9) ul li h3{
+	margin-top: .5em;
+	font-family: CeraGR, sans-serif;
+	font-weight: bold;
+	text-transform: none;
+}
+
+main section:nth-of-type(9) ul li p{
+	font-family: CeraGR, sans-serif;
+	font-size: .7em;
+	right: 0.3em;
+	top: 0.5em;
+	background-color: white;
+	padding-left: .8em;
+	padding-right: .8em;
+	padding-top: .3em;
+	padding-bottom: .3em;
+	font-weight: bold;
+	text-transform: none;
+	position: absolute;
+}
+
+main section:nth-of-type(9) ul li button{
+	position: absolute;
+	font-family: CeraGR, sans-serif;
+	margin-top: 22em;
+	font-size: .7em;
+	padding: 1.2em;
+	width: 150px;
+	word-spacing: .8em;
+	border-color: black;
+	background-color: white;
+	font-weight: bold;
+	text-transform: none;
+	border-radius: .5em;
+}
+
+main section:nth-of-type(9) ul li span {
+	font-family: CeraGR, sans-serif;
+	color: lightgray;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: none;
+	text-decoration: line-through;
+	
+}
+
+h1 {
+	font-family: CeraGR, sans-serif;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+main section:nth-of-type(10)  {
+	position: relative;
+}
+
+main section:nth-of-type(10) p {
+	font-family: CeraPro, sans-serif;
+	font-size: 0.9em;
+	text-align: center;
+	margin-top: 1.5em;
+	margin-left: 1.8em;
+	margin-right: 1.8em;
+}
+
+
+main section:nth-of-type(10) button {
+	position: absolute;
+	text-align: center;
+
+
+	padding: 1.5em;
+	height: 2em;
+	left: 4.7em;
+	right: 4.7em;
+	bottom: -4.5em;
+
+	line-height: .2em;
+
+	background-color: var(--color-white);
+	border: solid .20em black;
+	font-family: CeraGR, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+section:nth-of-type(11) h2 {
+	margin-top: 4em;
+
+	text-align: center;
+	font-family: CeraGR, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+
+main section:nth-of-type(12) ul  {
+	display: flex;
+	list-style: none;
+
+	 /* nieuwe code test */
+	width: 100%;
+
+
+ /* nieuwe code test */
+
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	gap: .2em;
+	margin-bottom: 1em;
+}
+
+main section:nth-of-type(12) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(12) ul li {
+	list-style: none;
+	border-radius: none;
+	flex-direction: column; 
+	display:flex;
+	position: relative;
+	width: calc(33% - 0.1em);
+	flex-shrink: 0;
+
+
+	
+	
+
+
+	/* nieuwe code */
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
+}
+
+main section:nth-of-type(12) img {
+    width: 100%;
+	aspect-ratio: 1 / 1;
+    object-fit: cover;
+	border-radius: 0;
+}
+
+/* nieuwe code: */
