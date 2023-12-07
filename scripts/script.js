@@ -2,53 +2,66 @@
 console.log("hi");
 
 //De code heb ik van://
-//https://blog.logrocket.com/build-image-carousel-from-scratch-vanilla-javascript//
+// https://dev.to/arindam1997007/creating-an-infinite-looping-image-carousel-with-css-and-javascript-4pao
+ 
+var carousel = document.querySelector('main section:nth-of-type(1) ul');
+var slides = document.querySelectorAll('main section:nth-of-type(1) ul li');
+ 
+var rightArrow = document.querySelector('main section:nth-of-type(1) > button:first-of-type');
+var leftArrow = document.querySelector('main section:nth-of-type(1) > button:last-of-type');
+ 
+var currentIndex = 0; // huidige slide
+var prevIndex; // vorige slide
+ 
+var totalSlides = slides.length; // totaal aantal slides
+// var imageWidth = 390; 
+// breedte van de slide
+ 
+var imageWidth = window.innerWidth;
+console.log(imageWidth);
 
-var slides = document.querySelectorAll("main section:nth-of-type(1) ul li");
-
-
-// loop through slides and set each slides translateX
-slides.forEach((slide, indx) => {
-  slide.style.transform = `translateX(${indx * 100}%)`;
+window.addEventListener("resize", () => {
+  imageWidth = window.innerWidth;
+  console.log(imageWidth);
 });
 
-// select next slide button
-const nextSlide = document.querySelector("main section:nth-of-type(1) p button:nth-of-type(1)");
-console.log(nextSlide);
-// current slide counter
-let curSlide = 0;
-// maximum number of slides
-let maxSlide = slides.length - 1;
-
-// add event listener and navigation functionality
-nextSlide.addEventListener("click", function () {
-  // check if current slide is the last and reset current slide
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
-    curSlide++;
-  }
-
-  //   move slide by -100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
+// vorige slide
+leftArrow.addEventListener('click', () => {
+  // bijwerken index
+  prevIndex = currentIndex;
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+ 
+  // verschuif carrousel naar links
+  carousel.style.transform = `translateX(-${imageWidth}px)`;
+  // plaats vorige dia aan het begin
+  carousel.insertBefore(slides[currentIndex], carousel.firstChild);
+ 
+  setTimeout(() => {
+    carousel.style.transform = '';
+    carousel.classList.add('sliding-transition');
+  }, 10);
+ 
+  setTimeout(() => {
+    carousel.classList.remove('sliding-transition');
+  }, 490);
 });
-
-// select next slide button
-const prevSlide = document.querySelector("main section:nth-of-type(1) p button:nth-of-type(2)");
-
-// add event listener and navigation functionality
-prevSlide.addEventListener("click", function () {
-  // check if current slide is the first and reset current slide to last
-  if (curSlide === 0) {
-    curSlide = maxSlide;
-  } else {
-    curSlide--;
-  }
-
-  //   move slide by 100%
-  slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-  });
+ 
+// volgende slide
+rightArrow.addEventListener('click', () => {
+  carousel.classList.add('sliding-transition');
+ 
+  // bijwerken index
+  prevIndex = currentIndex;
+  currentIndex = (currentIndex + 1) % totalSlides;
+ 
+  // verschuif carrousel naar links
+  carousel.style.transform = `translateX(-${imageWidth}px)`;
+ 
+  setTimeout(() => {
+    // plaats vorige dia aan het einde
+    carousel.appendChild(slides[prevIndex]);
+ 
+    carousel.classList.remove('sliding-transition');
+    carousel.style.transform = '';
+  }, 500);
 });
