@@ -143,21 +143,51 @@ Kayane:
 
 </details>
 
-
-
-
-
 ## Voortgang 2 (week 3)
 
 <details>
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Week 3 was aangebroken, ik heb heel veel in de lessen geleerd. Deze week zijn we vooral bezig geweest met oefenen van het positioneren met elementen op de pagina. Dit was voor mij heel fijn om in codepen deze opdrachten zelf te hebben gemaakt en geforked, zodat ik kan terug kijken hoe ik deze had gemaakt en toepassen in mijn eigen website.
 
+  <img src="readme-images/text-slide1.png" width="375px" alt="Foto van de text-slide nummer 1">
 
+   <img src="readme-images/text-slide2.png" width="375px" alt="Foto van de text-slide nummer 2">
 
+  Ik heb daardoor in deze text slide bar tekst bovenaan op mijn foto gekregen (De award winning label). Ook heb ik de slidebar allemaal dezelfde hoogte en breedte kunnen geven, ondaks dat de foto's groter waren. Student assistent Nina heeft mij daarmee geholpen. Ook staat de beschrijving text mooi gecentreerd onder het plaatje.
 
+  Ik vond het alleen wel lastig om de 3 foto's bovenaan de pagina de laten sliden met een knop. 
+
+  De code:
+
+  HTML:
+
+<img src="readme-images/htmlweek3.png" width="375px" alt="Foto van de html in week 3">
+
+  Javascript:
+
+  <img src="readme-images/javascript-week3.1.png" width="375px" alt="Foto 1 van de javascript week 3 ">
+
+  <img src="readme-images/javascript-week3.2.png" width="375px" alt="Foto 2 van de javascript week 3 ">
+
+Ik had best wel veel moeite met de slider. Ik had code van het internet gebruikt, waarbij de foto wel naar rechts en links slidet, alleen ging hij na de derde weer terug naar links sliden. Terwijl ik wilde dat hij alleen maar naar rechts kon sliden. Gelukkig heeft Nina mij kunnen helpen en hebben we dit samen kunnen fixen met javascript.
+
+ In week 3 vrijdag kreeg ik feedback van Sanne, alleen had ik ook moeite dat de slider alleen werkte als de page 390px was. Als ik deze groter of kleiner maakte, haperde de transition en was de slide niet smooth. Gelukkig kon Sanne mij helpen.
+
+ Deze code hebben wij toen geïmplementeerd:
+
+ <img src="readme-images/eventlistener1.png" width="375px" alt="Foto 3 van de javascript week 3 ">
+
+ <img src="readme-images/eventlistener2.png" width="375px" alt="Foto 4 van de javascript week 3 ">
+
+ Dit is de window resize event. 
+
+ <img src="readme-images/linkstranslateX.png" width="375px" alt="Foto 5 van de javascript week 3 ">
+
+ <img src="readme-images/rechtstranslateX.png" width="375px" alt="Foto 5 van de javascript week 3 ">
+
+De eventlisteners reageren op klikken op de knoppen voor het verschuiven naar de vorige en volgende dia's. Er wordt gebruik gemaakt van CSS-transities om animaties toe te voegen. De translateX eigenschap wordt gebruikt om de dia's horizontaal te verschuiven.
 
 
   ### Agenda voor meeting
