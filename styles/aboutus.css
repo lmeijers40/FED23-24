@@ -75,7 +75,7 @@ main section:nth-of-type(1) h2 {
         left: 4.7em;
         right: 4.7em;
         line-height: .2em;
-        background-color: var(--button-color2);
+        background-color: var(--button-color1);
         border: solid .20em black;
         font-family: CeraGR, sans-serif;
         text-transform: uppercase;
@@ -183,7 +183,7 @@ main section:nth-of-type(1) h2 {
         left: 4.7em;
         right: 4.7em;
         line-height: .2em;
-        background-color: var(--button-color2);
+        background-color: var(--button-color1);
         border: solid .20em black;
         font-family: CeraGR, sans-serif;
         text-transform: uppercase;
@@ -202,7 +202,7 @@ main section:nth-of-type(1) h2 {
         left: 4.7em;
         right: 4.7em;
         line-height: .2em;
-        background-color: var(--button-color2);
+        background-color: var(--button-color1);
         border: solid .20em black;
         font-family: CeraGR, sans-serif;
         text-transform: uppercase;
@@ -229,15 +229,17 @@ main section:nth-of-type(1) h2 {
         padding-top: 1.5em;
     }
 
-    section:nth-of-type(7) ul li:not(:last-child) a {
+    section:nth-of-type(7) ul li p {
          text-transform: uppercase;
          font-size: 1.2em;
          color: black;
+         font-family: Gotham, sans-serif;
          text-decoration: none;
          line-height: .5em;
+         font-weight: bolder;
      }
 
-     section:nth-of-type(7) ul li:last-child a { 
+     section:nth-of-type(7) ul li a { 
          text-align: center;
          text-transform: uppercase;
          font-weight: bolder;
@@ -258,7 +260,7 @@ main section:nth-of-type(1) h2 {
         left: 4.7em;
         right: 4.7em;
         line-height: .2em;
-        background-color: var(--color-white);
+        background-color: var(--button-color1);
         border: solid .20em black;
         font-family: CeraGR, sans-serif;
         text-transform: uppercase;

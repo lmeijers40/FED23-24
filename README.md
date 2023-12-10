@@ -277,6 +277,18 @@ Deze heb ik met de studentassistent gevonden en vertel ik meer over bij de versl
   -Hoe ziet de opzet eruit van mijn html pagina's?
   -Lijn in section, margin bottom werkt niet… Hoe?
 
+  Laura:
+
+  -?
+
+  Sander:
+
+  -?
+
+  Kayane:
+
+  -?
+
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
@@ -325,8 +337,22 @@ Deze heb ik met de studentassistent gevonden en vertel ik meer over bij de versl
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Photo Slider home-page:
+  <!-- https://blog.logrocket.com/build-image-carousel-from-scratch-vanilla-javascript/ --> + Sanne & Nina 
+<!-- https://dev.to/arindam1997007/creating-an-infinite-looping-image-carousel-with-css-and-javascript-4pao -->
+  2. Marquee header:
+  <!-- https://www.dofactory.com/html/spaces#:~:text=For%20text%2C%20to%20add%20extra,add%20space%20outside%20an%20element. -->
+  3. 5 states:
+  <!-- https://codepen.io/shooft/pen/vYvEaYm -->
+  4. Hamburger Menu:
+  <!-- https://codepen.io/lmeijers40/pen/GRzddNj?editors=1010 --> + Nina
+  5. Css Scroll Carousel:
+  <!-- https://codepen.io/newinweb/pen/EpPgdR -->
+  6. Fonts:
+  <!-- https://www.glowrecipe.com -->
+  7. Fonts converter:
+  <!-- https://cloudconvert.com/woff2-to-ttf  -->
+ 
+
 
 </details>
