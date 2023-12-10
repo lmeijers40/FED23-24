@@ -75,13 +75,17 @@ main section:nth-of-type(1) h2 {
         left: 4.7em;
         right: 4.7em;
         line-height: .2em;
-        background-color: #EDB4E0;
+        background-color: var(--button-color2);
         border: solid .20em black;
         font-family: CeraGR, sans-serif;
         text-transform: uppercase;
         font-weight: bold;
-        color: var(--color-white);
+        color: var(--color-text);
         margin-top: 1em;
+    }
+
+    main section:nth-of-type(3) button:hover {
+        background-color: var(--button-hover-background-color1-2);
     }
 
     main section:nth-of-type(4) h2{
@@ -136,6 +140,11 @@ main section:nth-of-type(1) h2 {
         margin-top: 2.5em;
     }
 
+    main section:nth-of-type(5) button:hover{
+        background-color: var(--button-hover-background-color1-2);
+    }
+    
+
     main section:nth-of-type(6)  {
         background-color: #ECDAE8;
         padding: 2.5em 0 6em 0;
@@ -174,12 +183,16 @@ main section:nth-of-type(1) h2 {
         left: 4.7em;
         right: 4.7em;
         line-height: .2em;
-        background-color: #EDB4E0;
+        background-color: var(--button-color2);
         border: solid .20em black;
         font-family: CeraGR, sans-serif;
         text-transform: uppercase;
         font-weight: bold;
-        color: var(--color-white);
+        color: var(	--color-text);
+    }
+
+    main section:nth-of-type(6) button:first-of-type:hover {
+        background-color: var(--button-color3); 
     }
 
     main section:nth-of-type(6) button:last-of-type {
@@ -189,18 +202,18 @@ main section:nth-of-type(1) h2 {
         left: 4.7em;
         right: 4.7em;
         line-height: .2em;
-        background-color: #EDB4E0;
+        background-color: var(--button-color2);
         border: solid .20em black;
         font-family: CeraGR, sans-serif;
         text-transform: uppercase;
         font-weight: bold;
-        color: var(--color-white);
+        color: var(--color-text);
         margin-top: 20em;
     }
 
-
-
-
+    main section:nth-of-type(6) button:last-of-type:hover{
+        background-color: var(--button-color3); 
+    }
     
     main section:nth-of-type(7) img {
         width: 8em;
@@ -230,12 +243,11 @@ main section:nth-of-type(1) h2 {
          font-weight: bolder;
          font-size: 1em;
          color: black;
-         
      }
 
      main section:nth-of-type(8) {
         margin-top: 2em;
-        background-color: #EDB4E0;
+        background-color: #ECDAE8;
         padding: .5em 0 8em 0;
     }
 
@@ -251,10 +263,13 @@ main section:nth-of-type(1) h2 {
         font-family: CeraGR, sans-serif;
         text-transform: uppercase;
         font-weight: bold;
-        color: #EDB4E0;
+        color: var(--color-text);
         margin-top: 2.5em;
     }
     
+    main section:nth-of-type(8) button:hover{
+        background-color: var(--button-color3); 
+    }
 
 
 

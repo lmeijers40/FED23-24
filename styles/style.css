@@ -518,9 +518,10 @@ section:nth-of-type(11) h2 {
 	font-family: CeraGR, sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
+	margin-bottom: 1em;
 }
 
-main section:nth-of-type(12) ul  {
+main section:nth-of-type(11) ul  {
 	display: flex;
 	list-style: none;
 	width: 100%;
@@ -533,11 +534,11 @@ main section:nth-of-type(12) ul  {
 	margin-bottom: 1em;
 }
 
-main section:nth-of-type(12) ul::-webkit-scrollbar {
+main section:nth-of-type(11) ul::-webkit-scrollbar {
 	display: none; /* WebKit (Chrome, Safari, etc.) */
 	}
 
-main section:nth-of-type(12) ul li {
+main section:nth-of-type(11) ul li {
 	list-style: none;
 	border-radius: none;
 	flex-direction: column; 
@@ -550,21 +551,21 @@ main section:nth-of-type(12) ul li {
 	scroll-snap-align: center;
 }
 
-main section:nth-of-type(12) img {
+main section:nth-of-type(11) img {
     width: 100%;
 	aspect-ratio: 1 / 1;
     object-fit: cover;
 	border-radius: 0;
 }
 
-main section:nth-of-type(13)  {
+main section:nth-of-type(12)  {
 	position: relative;
     display: grid;
     place-items: center;
     margin-bottom: 5em;
 }
 
-main section:nth-of-type(13) button {
+main section:nth-of-type(12) button {
 	position: absolute;
 	text-align: center;
 	padding: 1.5em;
@@ -581,7 +582,7 @@ main section:nth-of-type(13) button {
 	font-weight: bold;
 }
 
-main section:nth-of-type(13) button:hover{
+main section:nth-of-type(12) button:hover{
 	background-color: var(--button-hover-background-color1-2);
 }
 

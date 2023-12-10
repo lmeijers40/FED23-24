@@ -71,8 +71,8 @@ img {
 	--link-active-color:#00008B;
 
 	/* Buttons */
---button-color1:White;
---button-color2:black;
+--button-color1: #fff;
+--button-color2: #111;
 --button-color3:#EDB4E0;
 
 --button-hover-background-color1-2:#EDB4E0;
@@ -377,6 +377,11 @@ form input[type="email"] {
 	padding: .65em 5em .7em 1em;
 	margin-right: -2em;
 	border: 1px solid black;
+}
+
+form input[type="email"]::-webkit-search-clear-button {
+    -webkit-appearance: button;
+    color: red; /* You can set the color here, but it may not work in all browsers */
 }
 
 footer button {

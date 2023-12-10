@@ -56,17 +56,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+Tijdens de toegankelijkheidstest van mijn website ontdekte ik veel verbeterpunten in de Glow Recipe Website.
 
-  -De tekst aan de bovenkant in de pagina kun je niet snel weg van met de screenreader.
-  -Chrome plugin, Colorblindly, kun je gebruiken om te zien hoe mensen die kleurenblind jou pagina evaren.
-  -De imgs hebben geen alt attribute.
-  -Headings zijn niet gebruikt om een element te introduceren.
-  -De slideshow kan niet gepauzeerd worden (foto's)
-  -Dark en light mode worden niet gesupport op de pagina van Glow Recipe.
-  -Hetzelfde geld voor high-contrast mode.
-  -Geen custom::selection colors gebruikt.
-
+ De marquee bovenaan de website is moeilijk over te slaan voor screenreader-gebruikers, hij herhaalt zich veel. 
+ 
+ Ik heb een fijne tip gekregen in de les en ik overweeg de Chrome-plugin 'Colorblindly' te gebruiken. Dit zodat ik de ervaring van kleurenblinde gebruikers kan proberen te verbeteren. 
+ 
+ Ook misten alt-attributen bij de afbeeldingen, wat belangrijk is voor screenreader met tab. Daarbij zijn sommige states bij links, buttons en forms. De a linkjes hebben geen visited state. De buttons hebben geen cursor:pointer en zijn niet dezelfde kleur wanneer je eroverheen hovert. Ook bevat de forms geen focus state. 
+ 
+ Het ontbreken van consistente heading-levels en de onmogelijkheid om de diavoorstelling te pauzeren, vielen op.
+ 
+  Mijn website ondersteunt nog geen dark mode, light mode, en high-contrast mode. Bovendien was er geen aangepaste ::selection kleuren toegepast op de echte website.
 
 </details>
 
@@ -99,18 +99,32 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   <img src="readme-images/marquee1.png" width="375px" alt="Foto van de marquee tekst in de header"> 
- Het werken met de marquee ging goed. Ik heb gekeken naar hoe je in de marquee een bepaalde stijling kan geven van 
+  Het opzetten van de pagina ging best soepel, ik had op het begin alleen wat moeite om te beginnen met opstarten van het coderen. Maar na het vele proberen en hulp vragen in de klas pakte ik het gelukkig weer snel op. Ik moest ook wel wennen aan het feit dat je 2 aparte html paginas moest maken en 3 aparte css paginas. In jaar 1 heb ik dit nooit zo gedaan, alleen vind ik het wel veel fijner om zo te werken. De regels code word zo makkelijker leesbaar en goed te onderscheiden van elkaar.
+
+ Het werken met de marquee ging goed. Ik heb gekeken naar hoe je in de marquee een bepaalde stijling kan geven. Dit vond ik wel lastig, omdat een background color niet even makkelijk ging door de opzet van mijn marquee op het eerst. Maar na veel proberen en de structuur beter op te zetten is het uiteindelijk gelukt!
 <img src="readme-images/marquee2.png" width="375px" alt="Foto van de marquee code in de header"> 
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Lisa           | Laura              | Sander             | Kayane           |
-  | ---            | ---                | ---                | ---              |
-  |Nav Bar         | 3 buttons stijl    | Margin en padding  | en dan ik dat    |
-  |Css paginas?    | Haai met nummers   | Semantisch correct?| dit wil ik zeker |
-  |...             | ...                | ...                | ...              |
+Lisa:
+
+-Nav Bar
+-Css paginas verschillende
+
+Laura:
+
+-3 buttons stijl
+-Haai met nummers
+
+Sander:
+-Margin en padding
+-Semantisch correct?
+
+Kayane:
+-Hamburger menu
+-Javascript
 
 
   ### Verslag van meeting
@@ -136,23 +150,35 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 
+
+
+
+
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+ Lisa:
+
+-Animatie op button ‘^’ bij kopen
+-Slider bar in een loop aangeven
+
+Laura:
+-De achtergrond en afbeelding bij de h1
+-Iframe stylen
+
+Sander:
+-?
+
+Kayane:
+-Footer
+-Selectors
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - De animatie code kijken we samen even naar, met de studentassistent. 
+  - De slider bar in een loop aangeven is eigenlijk helemaal niet handig, want dan weet de gebruiker niet wanneer de producten stopt en is het eigenlijk niet toegankelijk.
 
 </details>
 
