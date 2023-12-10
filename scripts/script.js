@@ -65,3 +65,21 @@ rightArrow.addEventListener('click', () => {
     carousel.style.transform = '';
   }, 500);
 });
+
+var openMenuButton = document.querySelector("header nav > button");
+var sluitMenuButton = document.querySelector("header nav > section > section:first-of-type button");
+var deNav = document.querySelector("header nav > section");
+var body = document.querySelector('body');
+
+openMenuButton.onclick = openMenu;
+sluitMenuButton.onclick = sluitMenu;
+
+function openMenu(){
+  deNav.classList.add("showMenu");
+  body.classList.add("overflowHidden");
+}
+
+function sluitMenu(){
+  deNav.classList.remove("showMenu");
+  body.classList.remove("overflowHidden");
+}

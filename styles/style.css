@@ -1,5 +1,15 @@
 main {
 	gap: 1em;
+	border-bottom: 1px solid #000;
+}
+
+a {
+	color: #454545;
+    text-decoration: none;
+}
+
+button {
+	cursor: pointer;
 }
 
 /*eerste 3 fotos*/
@@ -12,6 +22,7 @@ main section:nth-of-type(1) {
 main section:nth-of-type(1) ul {
     display: flex;
 }
+
 main section:nth-of-type(1) ul.sliding-transition {
     transition: transform 0.5s ease-in-out;
 }
@@ -60,7 +71,7 @@ h3 {
 }
  
  
-header section ul li {
+header > section ul li {
     list-style: none;
     background-color: #F9EDF7;
     height: 3em;
@@ -81,11 +92,15 @@ main section:nth-of-type(1) ul li button {
     height: 2em;
     text-align: center;
     line-height: .2em;
-    background-color: var(--color-white);
+    background-color: var(--button-color1);
     border: solid .20em black;
     font-family: CeraGR, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+main section:nth-of-type(1) ul li button:hover {
+    background-color: var(--button-hover-background-color1-2);
 }
  
 main section:nth-of-type(3) {
@@ -96,12 +111,6 @@ main section:nth-of-type(3) {
 
 section:nth-of-type(2) p {
 	display: none;
-}
-
-h3 {
-	font-family: CeraGR;
-	font-weight: 400;
-	font-size: .8em;
 }
 
 main section:nth-of-type(1) {
@@ -141,6 +150,10 @@ main section:nth-of-type(3) ul li {
 	height: 10em;
 	scroll-snap-stop: always;
 	scroll-snap-align: center;
+}
+
+main section:nth-of-type(3) ul li:hover{
+	background-color: var(--button-hover-background-color1-2);
 }
 
 
@@ -218,10 +231,14 @@ main section:nth-of-type(4) ul li button{
 	width: 150px;
 	word-spacing: .8em;
 	border-color: black;
-	background-color: white;
+	background-color: var(--button-color1);
 	font-weight: bold;
 	text-transform: none;
 	border-radius: .5em;
+}
+
+main section:nth-of-type(4) ul li button:hover{
+	background-color: var(--button-hover-background-color1-2);
 }
 
 main section:nth-of-type(4) ul li s {
@@ -246,11 +263,15 @@ main section:nth-of-type(5) button {
 	right: 5em;
 	bottom: 2em;
 	line-height: .2em;
-	background-color: var(--color-white);
+	background-color: var(--button-color1);
 	border: solid .20em black;
 	font-family: CeraGR, sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+main section:nth-of-type(5) button:hover {
+	background-color: var(--button-hover-background-color1-2);
 }
 
 main section:nth-of-type(6) {
@@ -316,11 +337,15 @@ main section:nth-of-type(6) ul li button{
 	width: 150px;
 	word-spacing: .8em;
 	border-color: black;
-	background-color: white;
+	background-color: var(--button-color1);
 	color: black;
 	font-weight: bold;
 	text-transform: none;
 	border-radius: .5em;
+}
+
+main section:nth-of-type(6) ul li button:hover{
+	background-color: var(--button-hover-background-color1-2);
 }
 
 main section:nth-of-type(6) ul li s {
@@ -346,11 +371,15 @@ main section:nth-of-type(7) button {
 	right: 4.7em;
 	bottom: 1.4em;
 	line-height: .2em;
-	background-color: var(--color-white);
+	background-color: var(--button-color1);
 	border: solid .20em black;
 	font-family: CeraGR, sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+main section:nth-of-type(7) button:hover{
+	background-color: var(--button-hover-background-color1-2);
 }
 
 /*tekst op foto screenreader*/
@@ -424,10 +453,14 @@ main section:nth-of-type(9) ul li button{
 	width: 150px;
 	word-spacing: .8em;
 	border-color: black;
-	background-color: white;
+	background-color: var(--button-color1);
 	font-weight: bold;
 	text-transform: none;
 	border-radius: .5em;
+}
+
+main section:nth-of-type(9) ul li button:hover{
+	background-color: var(--button-hover-background-color1-2);
 }
 
 main section:nth-of-type(9) ul li s {
@@ -468,11 +501,15 @@ main section:nth-of-type(10) button {
 	right: 4.7em;
 	bottom: -4.5em;
 	line-height: .2em;
-	background-color: var(--color-white);
+	background-color: var(--button-color1);
 	border: solid .20em black;
 	font-family: CeraGR, sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+main section:nth-of-type(10) button:hover{
+	background-color: var(--button-hover-background-color1-2);
 }
 
 section:nth-of-type(11) h2 {
@@ -522,6 +559,9 @@ main section:nth-of-type(12) img {
 
 main section:nth-of-type(13)  {
 	position: relative;
+    display: grid;
+    place-items: center;
+    margin-bottom: 5em;
 }
 
 main section:nth-of-type(13) button {
@@ -534,20 +574,24 @@ main section:nth-of-type(13) button {
 	bottom: -3.5em;
 	line-height: .2em;
 	color: var(--color-white);
-	background-color: black;
+	background-color: var(--button-color2);
 	border: solid .20em black;
 	font-family: CeraGR, sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
+main section:nth-of-type(13) button:hover{
+	background-color: var(--button-hover-background-color1-2);
+}
 
-main section:nth-of-type(14) {
+
+/* main section:nth-of-type(14) {
 	content: "";
 	display: block;
 	border-bottom: 1px solid #000;
 	margin-top: 4em;
-}
+} */
 
 
 
