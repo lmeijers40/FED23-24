@@ -181,13 +181,22 @@ Ik had best wel veel moeite met de slider. Ik had code van het internet gebruikt
 
  <img src="readme-images/eventlistener2.png" width="375px" alt="Foto 4 van de javascript week 3 ">
 
- Dit is de window resize event. 
+ Dit is de window resize event:
+
+ De eventlisteners reageren op klikken op de knoppen voor het verschuiven naar de vorige en volgende dia's. 
+
+ (currentIndex - 1): Ik begin bij de huidige dia en trek er 1 van af om naar de vorige dia te gaan.
+ 
+ +totalSlides: 
+ Maar, wat als ik al bij de eerste dia ben? Dan zou je willen overspringen naar de laatste dia. Dus voeg ik het totale aantal dia's toe om ervoor te zorgen dat wik niet onder 0 kom.
+
+%totalSlides: Als ik voorbij de laatste dia ga, wil ik weer teruggaan naar de eerste dia. De modulo (%) berekening zorgt ervoor dat ik binnen het bereik blijf en de slider teruggaat naar de foto op het begin (als ik voorbij het einde ga).
 
  <img src="readme-images/linkstranslateX.png" width="375px" alt="Foto 5 van de javascript week 3 ">
 
  <img src="readme-images/rechtstranslateX.png" width="375px" alt="Foto 5 van de javascript week 3 ">
 
-De eventlisteners reageren op klikken op de knoppen voor het verschuiven naar de vorige en volgende dia's. Er wordt gebruik gemaakt van CSS-transities om animaties toe te voegen. De translateX eigenschap wordt gebruikt om de dia's horizontaal te verschuiven.
+ Tot slot de translayeX. Deze translateX eigenschap wordt gebruikt om de dia's horizontaal te verschuiven.
 
 
   ### Agenda voor meeting
