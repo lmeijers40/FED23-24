@@ -228,16 +228,19 @@ Kayane:
 </details>
 
 
-
-
-
 ## Toegankelijkheidstest 2/2 (week 4)
 
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  -Ik moet bij alle sections een h2 als kopje aangeven, ookal zie je deze niet.
+  -De alt tekst in het engels zetten, omdat mijn website language ook in het engels staat.
+  -De surface plane moet ik nog uitwerken, die staan nog niet op mijn pagina.
+  -Mijn code was nog niet helemaal W3c gevalideerd, deze moest ik later nog goed schrijven.
+  -Dark en light mode nog toevoegen aan mijn pagina.
+  -De contrast van de normal, large-sized en icons checken.
+  -::selection kleuren stond nog op default blauw, deze veranderen en duidelijk maken.
 
 </details>
 
@@ -251,26 +254,36 @@ Kayane:
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ Week 4 had ik wel heel veel verbetering. Ik had alle 2 de pagina's af en ik was begonnen met delen voor de surface plane (zoals bijvoorbeeld een hamburger menu). 
+
+ Ik had alleen wel veel sections gebruikt toen ik bezig was met mijn html voor de about us page. Deze was met zo veel sections gemaakt, dat deze niet meer semantisch correct was. 
+
+ De code after (wel opgeschoond):
+
+ <img src="readme-images/opgeschoond.png" width="375px" alt="Foto 5 van de javascript week 3 ">
+
+
+Ook vond ik het lastig om een lijn op de pagina te zetten. Ik had hiervoor een section gebruikt maar met geen content erin, die toen gestijld met CSS. Eigenlijk mag dit niet, dus moest ik een andere oplossing zoeken.
+
+Deze heb ik met de studentassistent gevonden en vertel ik meer over bij de verslag van de meeting.
+
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+ Lisa:
 
+  -Hoe ziet de opzet eruit van mijn html pagina's?
+  -Lijn in section, margin bottom werkt niet… Hoe?
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Niet goed, mijn about us is met teveel sections gemaakt. Dit hebben we wel kunnen verbeteren en ik zou er thuis verder aan werken.
+
+  - Met de student assistent naar gekeken, ik heb op de main nu de lijn gezet met een margin bottom. Toen werkte het!
+
 
 </details>
 
