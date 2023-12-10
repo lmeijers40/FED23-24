@@ -58,6 +58,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
 Tijdens de toegankelijkheidstest van mijn website ontdekte ik veel verbeterpunten in de Glow Recipe Website.
 
+
  De marquee bovenaan de website is moeilijk over te slaan voor screenreader-gebruikers, hij herhaalt zich veel. 
  
  Ik heb een fijne tip gekregen in de les en ik overweeg de Chrome-plugin 'Colorblindly' te gebruiken. Dit zodat ik de ervaring van kleurenblinde gebruikers kan proberen te verbeteren. 
@@ -98,11 +99,14 @@ Tijdens de toegankelijkheidstest van mijn website ontdekte ik veel verbeterpunte
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  <img src="readme-images/marquee1.png" width="375px" alt="Foto van de marquee tekst in de header"> 
   Het opzetten van de pagina ging best soepel, ik had op het begin alleen wat moeite om te beginnen met opstarten van het coderen. Maar na het vele proberen en hulp vragen in de klas pakte ik het gelukkig weer snel op. Ik moest ook wel wennen aan het feit dat je 2 aparte html paginas moest maken en 3 aparte css paginas. In jaar 1 heb ik dit nooit zo gedaan, alleen vind ik het wel veel fijner om zo te werken. De regels code word zo makkelijker leesbaar en goed te onderscheiden van elkaar.
 
  Het werken met de marquee ging goed. Ik heb gekeken naar hoe je in de marquee een bepaalde stijling kan geven. Dit vond ik wel lastig, omdat een background color niet even makkelijk ging door de opzet van mijn marquee op het eerst. Maar na veel proberen en de structuur beter op te zetten is het uiteindelijk gelukt!
+
+
 <img src="readme-images/marquee2.png" width="375px" alt="Foto van de marquee code in de header"> 
+
+<img src="readme-images/marquee1.png" width="375px" alt="Foto van de marquee tekst in de header"> 
 
 
   ### Agenda voor meeting
@@ -119,10 +123,12 @@ Laura:
 -Haai met nummers
 
 Sander:
+
 -Margin en padding
 -Semantisch correct?
 
 Kayane:
+
 -Hamburger menu
 -Javascript
 
