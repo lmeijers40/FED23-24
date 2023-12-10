@@ -12,7 +12,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Jij
 
-<details open>
+<details>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
@@ -305,7 +305,7 @@ Deze heb ik met de studentassistent gevonden en vertel ik meer over bij de versl
 
 ## Eindgesprek (week 5)
 
-<details>
+<details open>
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
@@ -339,9 +339,9 @@ Deze heb ik met de studentassistent gevonden en vertel ik meer over bij de versl
 
   1. Photo Slider home-page:
    https://blog.logrocket.com/build-image-carousel-from-scratch-vanilla-javascript/  + Sanne & Nina 
- https://dev.to/arindam1997007/creating-an-infinite-looping-image-carousel-with-css-and-javascript-4pao -->
+ https://dev.to/arindam1997007/creating-an-infinite-looping-image-carousel-with-css-and-javascript-4pao 
   2. Marquee header:
-   https://www.dofactory.com/html/spaces#:~:text=For%20text%2C%20to%20add%20extra,add%20space%20outside%20an%20element.
+   https://www.dofactory.com/html/spaces#:~:text=For%20text%2C%20to%20add%20extra,add%20space%20outside%20an%20element
   3. 5 states:
    https://codepen.io/shooft/pen/vYvEaYm 
   4. Hamburger Menu:
@@ -352,7 +352,5 @@ Deze heb ik met de studentassistent gevonden en vertel ik meer over bij de versl
    https://www.glowrecipe.com 
   7. Fonts converter:
    https://cloudconvert.com/woff2-to-ttf 
- 
-
 
 </details>

@@ -1,3 +1,8 @@
+/* FONTS + CONVERTER */
+
+/* https://www.glowrecipe.com */
+/* https://cloudconvert.com/woff2-to-ttf  */
+
 @font-face {
 	font-family: 'CeraGR';
 	src: url('../fonts/CeraGR-Regular.ttf') format('truetype');
@@ -58,6 +63,9 @@ img {
 /* CUSTOM PROPERTIES */
 /*********************/
 
+
+/* DE 5 STATES */
+/* https://codepen.io/shooft/pen/vYvEaYm  */
 :root {
 	/* kleuren */
 	--color-text: #111;
@@ -67,8 +75,10 @@ img {
 	/* Linkjes */
 	--link-color:#111; 
 	--link-visited-color: #CC8899;
-	--link-background-color: #ff6ec7;
+	--link-background-color: #ff6ec7; /*deze niet*/
 	--link-active-color:#00008B;
+	 
+
 
 	/* Buttons */
 --button-color1: #fff;
@@ -77,10 +87,13 @@ img {
 
 --button-hover-background-color1-2:#EDB4E0;
 --button-hover-background-color3: #fff;
---button-focus-border-color:dodgerblue; 
+
+--button-focus-border-color:rgb(222, 6, 6); 
+
+/* --button-focus-border-color:rgb(6, 114, 222);  */
 
 /* Focus */
---form-focus-border-color:dodgerblue; 
+--form-focus-border-color:rgb(6, 114, 222); 
 }
 
 body {
@@ -162,7 +175,15 @@ a {
 	border: 2px solid var(--form-focus-border-color);
 	}
 
-  
+  nav ul li a:hover {
+	text-decoration:none;
+	text-decoration-thickness:none;
+	text-underline-offset:none;
+  }
+
+  nav ul li a:visited {
+	color: unset;
+  }
 
 
 
@@ -298,20 +319,22 @@ header nav>section {
 	text-transform: uppercase;
 }
 
+/* Bij iedere section behalve de bovenste balk komt er witruimte links en rechts */
 header nav>section>*:not(section:first-of-type) {
 	margin: 0 1em;
 	font-family: Cerapro, sans-serif;
 }
 
+/* De bovenste 3 afbeeldingen naast elkaar zetten */
 header nav>section>section:nth-of-type(2) {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 0.6em;
 }
 
+/*1/1 van eerste lijn tot laatste lijn in grid*/
 header nav>section>section:nth-of-type(2) h2 {
 	grid-column: 1/-1;
-	/*1/1 van eerste lijn tot laatste lijn in grid*/
 }
 
 header nav>section>section:nth-of-type(2) img {
@@ -326,19 +349,9 @@ header nav>section>section:nth-of-type(2) p {
 	height: fit-content;
 	margin: 0.5em .5em 0 .5em;
 }
+/*EINDE HEADER*/
 
-
-
-/*EINDE*/
-
-
-
-
-
-
-
-
-/*Footer begin*/
+/*FOOTER BEGIN*/
 footer {
 	margin: 1.4em;
 }
@@ -456,6 +469,4 @@ footer section:nth-of-type(4) p {
 	line-height: 0em;
 }
 
-/* footer eind */
-
-/*Footer eind*/
+/*FOOTER EIND*/
