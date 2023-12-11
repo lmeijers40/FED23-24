@@ -1,548 +1,609 @@
-/* FONTS + CONVERTER */
-
-/* https://www.glowrecipe.com */
-/* https://cloudconvert.com/woff2-to-ttf  */
-
-@font-face {
-	font-family: 'CeraGR';
-	src: url('../fonts/CeraGR-Regular.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'CeraGR';
-	src: url('../fonts/CeraGR-Bold.ttf') format('truetype');
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: 'CeraPro';
-	src: url('../fonts/CeraPro-Light.ttf') format('truetype');
-}
-
-
-@font-face {
-	font-family: 'Gotham';
-	src: url('../fonts/Gotham-Bold.ttf') format('truetype');
-	font-weight: 700;
-}
-
-@font-face {
-	font-family: 'Gotham';
-	src: url('../fonts/Gotham-Book.ttf') format('truetype');
-	font-weight: 400;
-}
-
-@font-face {
-	font-family: 'Playfair-Display';
-	src: url('../fonts/Playfair-Display.ttf') format('truetype');
-}
-
-/**************/
-/* CSS REMEDY */
-/**************/
-
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-img {
-	width: 100%;
-	height: auto;
-}
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-
-
-/* DE 5 STATES */
-/* https://codepen.io/shooft/pen/vYvEaYm  */
-:root {
-	/* kleuren */
-	--color-text: #111;
-	--color-white: #fff;
-	--color-background: #FBF5FA;
-
-	/* Linkjes */
-	--link-color:#111; 
-	--link-visited-color: #CC8899;
-	--link-background-color: #ff6ec7; /*deze niet*/
-	--link-active-color:#00008B;
-	 
-
-
-	/* Buttons */
---button-color1: #fff;
---button-color2: #111;
---button-color3:#EDB4E0;
-
---button-hover-background-color1-2:#EDB4E0;
---button-hover-background-color3: #fff;
-
---button-focus-border-color:rgb(222, 6, 6); 
-
-/* --button-focus-border-color:rgb(6, 114, 222);  */
-
-/* Focus */
---form-focus-border-color:rgb(6, 114, 222); 
-}
-
-body {
-	background-color: var(--color-background);
-}
-
-body.overflowHidden {
-	overflow: hidden;
-	/* filter: brightness(50%); */
-}
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-header {
-	position: sticky;
-	top: 0;
-	z-index: 999;
-}
-
 main {
-	display: flex;
-	flex-direction: column;
+	gap: 1em;
+	border-bottom: 1px solid #000;
 }
 
-li {
-	list-style: none;
+/* a {
+	color: #454545;
+    text-decoration: none;
+} */
+
+button {
+	cursor: pointer;
 }
 
-a {
-	color:var(--link-color);
-	text-decoration:none;
-	outline:none;
+/*eerste 3 fotos*/
+main section:nth-of-type(1) {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
-
- a:visited {
-	color:var(--link-visited-color);
-  }
   
-  a:focus {
-	/* background-color:var(--button-background-focus-color); */
-	border-radius: .3em;
-	border: 2px solid var(--button-focus-border-color);
-  }
+main section:nth-of-type(1) ul {
+    display: flex;
+}
+
+main section:nth-of-type(1) ul.sliding-transition {
+    transition: transform 0.5s ease-in-out;
+}
   
- a:hover {
-	text-decoration:underline;
-	text-decoration-thickness:2px;
-	text-underline-offset: 2px;
-  }
+main section:nth-of-type(1) ul li {
+    position: relative;
+    flex: 1;
+}
   
- a:active {
-	/* als alles lekker snel gaat zie je dit niet */
-	/* maar des te meer reden om de :active state wel te definieren */
-	/* juist als iets traag verloopt, krijg je dan feedback */
-	color:var(--link-active-color);
-	text-decoration:underline;
-	text-decoration-thickness:2px;
-	text-underline-offset: 2px;
-  }
-
-
-  button:focus {
-	border-radius: .3em;
-	border: 2px solid var(--button-focus-border-color) ;
-  }
-  
-  button:active {
-	background-color:var(--button-background-active-color);
-  }
-
-  form:hover {
-	cursor: text;
-	}
-	
-	form:focus {
-	border-radius: .3em;
-	border: 2px solid var(--form-focus-border-color);
-	}
-
-  header nav ul li a:hover {
-	text-decoration:none;
-	text-decoration-thickness:none;
-	text-underline-offset:none;
-  }
-
-  header nav ul li a:visited {
-	color: unset;
-  }
-
-
-
-header>section {
-	background-color: #F9EDF7;
+main section:nth-of-type(1) ul li img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+ 
+/* pijltjes */
+main section:nth-of-type(1) > button {
+    position: absolute;
+    top: 45%;
+    font-family: CeraGR;
+    font-size: 3em;
+    color: var(--color-next);	/* TEST NS */
+    background-color: transparent;
+    border: none;
+    z-index: 10;
+    cursor: pointer;
+}
+/* pijltje naar rechts */
+main section:nth-of-type(1) > button:first-of-type {
+    right: 2%;
+}
+/* pijltje naar links */
+main section:nth-of-type(1) > button:last-of-type {
+    left: 2%;
+}
+ 
+section:nth-of-type(2) p {
+    display: none;
+}
+ 
+h3 {
+    font-family: CeraGR;
+    font-weight: 400;
+    font-size: .8em;
+	color: var(--color-text); 	/* TEST DARK LIGHT NS */
+}
+ 
+ 
+/* header > section ul li {
+    list-style: none;
+    background-color: #F9EDF7;
+    height: 3em;
+    display: flex;
+    align-items: center;
+} */
+ 
+main section:nth-of-type(1) {
+    position: relative;
+}
+ 
+main section:nth-of-type(1) ul li button {
+    position: absolute;
+    left: 5em;
+    right: 5em;
+    bottom: 3em;
+    padding: 1.5em;
+    height: 2em;
+    text-align: center;
+    line-height: .2em;
+    background-color: var(--button-color1);
+    border: solid .20em black;
+    font-family: CeraGR, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-marquee {
-	font-family: CeraPro, sans-serif;
-	font-size: .7em;
+main section:nth-of-type(1) ul li button:hover {
+    background-color: var(--button-hover-background-color1-2);
 }
-
-marquee ul {
-	display: flex;
-	gap: 20vw;
-	list-style: none;
-	padding: 0;
-	margin: 0;
+ 
+main section:nth-of-type(3) {
+    margin: 1em;
 }
-
-marquee strong {
-	font-weight: normal;
-	text-transform: uppercase;
-}
-
-header nav {
-	background-color: white;
-	display: grid;
-	grid-template-columns: 1fr max-content 1fr;
-	align-items: center;
-	height: 3em;
-}
-
-/* logo */
-header nav>a {
-	height: .75em;
-	display: block;
-}
-
-header nav>a img {
-	height: 100%;
-	display: block;
-}
-
-/* menu button */
-header nav>button {
-	width: 2em;
-	aspect-ratio: 1/1;
-	order: -1;
-
-	display: grid;
-	place-items: center;
-}
-
-header nav>button img {
-	width: 1em;
-	display: block;
-}
-
-header nav>ul {
-	display: flex;
-	align-items: center;
-	justify-self: end;
-}
-
-header nav>ul li {
-	height: 2em;
-	aspect-ratio: 1/1;
-	display: grid;
-	place-items: center;
-}
-
-header nav>ul li button,
-header nav>ul li a {
-	font-size: 1em;
-}
-
-/*begin*/
-header nav>ul li img {
-	height: 1em;
-	display: block;
-}
-
-header>section ul li {
-	list-style: none;
-	background-color: #F9EDF7;
-	height: 3em;
-	display: flex;
-	align-items: center;
-}
-
-nav button {
-	background-color: var(--color-white);
-	border: none;
-}
-
-header nav>section {
-	position: fixed;
-	top: 0;
-	right: 2.5em;
-	bottom: 0;
-	left: -100%;
-	width: calc(100% - 2.5em);
-	background-color: var(--color-white);
-	transition: 1s;
-}
-
-header nav>section.showMenu {
-	left: 0;
-	overflow-y: scroll;
-}
-
-header nav>section>section:first-of-type{
-	background-color: black;
-	padding-top: .3em;
-	padding-bottom: .3em;
-}
-
-header nav>section>section:first-of-type button {
-	background-color: black;
-}
-
-header nav>section>section:first-of-type button {
-	background-color: black;
-	width: 1.2em;
-	margin: .9em .5em .5em .9em;
-}
+  /*einde fotos slider*/
 
 
-header nav>section {
-	display: flex;
-	flex-direction: column;
-	gap: 0.6em;
-	text-transform: uppercase;
-}
-
-/* Bij iedere section behalve de bovenste balk komt er witruimte links en rechts */
-header nav>section>*:not(section:first-of-type) {
-	margin: 0 1em;
-}
-
-/* De bovenste 3 afbeeldingen naast elkaar zetten */
-header nav>section>section:nth-of-type(2) {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 0.6em;
-	margin-bottom: 1em;
-}
-
-/*1/1 van eerste lijn tot laatste lijn in grid*/
-header nav>section>section:nth-of-type(2) h2 {
-	grid-column: 1/-1;
-	font-family: Cerapro, sans-serif;
-}
-
-header nav>section>section:nth-of-type(2) img {
-	border-radius: .4em;
-	height: 10em;
-	object-fit: cover;
-}
-
-header nav>section>section:nth-of-type(2) p {
-	border-radius: 1em;
-	width: 6em;
-	height: fit-content;
-	margin: 0.5em .5em 0 .5em;
-}
-
-
-
-/* UITKLAP CSS BEGIN */
-
-header details summary {
-	font-size: .9em;
-	color: #444444;
-}
-	
-header details {
-font-size: 1em;
-padding: 0.7em 0 0.1em 0;
-font-weight: 600;
-border-bottom: 0.01em solid black;
-transition: .3s ease-in;
-font-family: Gotham, sans-serif;
-color: #444444;
-}
-
-header details:nth-of-type(1){
-	border-top: 0.01em solid black;
-}
-
-header details[open] {
-	padding: 1em 0 1em;
-}
-
-header details ul li a {
-	line-height: 2.5em;
-	font-weight: 700;
-	font-size: .7em;
-}
-
-header summary::-webkit-details-marker {
+section:nth-of-type(2) p {
 	display: none;
 }
 
-header summary {
+main section:nth-of-type(1) {
+	position: relative;
+}
+
+main section:nth-of-type(3) {
+	margin: 1em;
+}
+
+main section:nth-of-type(3) ul  {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 1em;
 	list-style: none;
+	width: 100%;
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	gap: 1em;
 }
 
-header summary::after ul li {
-	font-size: 1em;
+main section:nth-of-type(3) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(3) ul li {
+	list-style: none;
+	background-color: var(--color-white);
+	padding: 0.75em;
+	border-radius: .5em;
+	flex-direction: column; 
+	display:flex;
+	gap:1em ;
+	width: 100px;
+	flex-shrink: 0;
+	height: 10em;
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
 }
 
-header summary::after {
-	content: "+";
-	font-weight: 400;
-	font-size: 1em;
-	background-position: center center;
-	background-repeat: no-repeat;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 2em;
-	aspect-ratio: 1;
-	transition: .3s ease-out;
+main section:nth-of-type(3) ul li h3{
+	color:black;
 }
 
-header details[open] summary::after {
-	content: "-";
+main section:nth-of-type(3) ul li:hover{
+	background-color: var(--button-hover-background-color1-2);
 }
 
 
-/* UITKLAP CSS EIND */
-
-
-
-/*EINDE HEADER*/
-
-/*FOOTER BEGIN*/
-footer {
-	margin: 1.4em;
-}
-
-footer h3 {
-	font-family: CeraGR, sans-serif;
-	color: black;
-	text-decoration: none;
-	font-size: 1em;
-	font-weight: bold;
+ul li h3 {
 	text-transform: uppercase;
-	margin-top: 2.5em;
-	margin-bottom: 1em;
 }
 
-footer {
-	font-family: CeraPro, sans-serif;
-	/* color: #5f5f5f; */
-	text-decoration: none;
-	line-height: 2.5em;
-	font-size: .9em;
-	font-weight: 100;
+main ul li img {
+	border-radius: .5em;
+	order:-1;
 }
 
-footer p {
-	font-family: CeraPro, sans-serif;
-	color: #5f5f5f;
-	text-decoration: none;
-	font-size: .9em;
-	font-weight: 100;
+main section:nth-of-type(4) {
+	margin: 1em;
+}
+
+main section:nth-of-type(4) ul  {
+	display: flex;
+	list-style: none;
+	width: 100%;
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	gap: 1em;
+}
+
+main section:nth-of-type(4) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(4) ul li {
+	list-style: none;
+	border-radius: .5em;
+	flex-direction: column; 
+	display:flex;
+	gap: .1em;
+	position: relative;
+	width: 150px;
+	flex-shrink: 0;
+	margin-bottom: 4em;
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
+}
+
+main section:nth-of-type(4) ul li h3{
+	margin-top: .5em;
+	font-family: CeraGR, sans-serif;
+	font-weight: bold;
+	text-transform: none;
+}
+
+main section:nth-of-type(4) ul li p{
+	font-family: CeraGR, sans-serif;
+	font-size: .7em;
+	right: 0.3em;
+	top: 0.5em;
+	color: var(--color-text);/* TEST NS toegevoegd */
+	background-color: var(--color-background); /* TEST NS toegevoegd */
+	padding-left: .8em;
+	padding-right: .8em;
+	padding-top: .3em;
+	padding-bottom: .3em;
+	font-weight: bold;
+	text-transform: none;
+	position: absolute;
+}
+
+main section:nth-of-type(4) ul li button{
+	position: absolute;
+	font-family: CeraGR, sans-serif;
+	margin-top: 22em;
+	font-size: .7em;
+	padding: 1.2em;
+	width: 150px;
+	word-spacing: .8em;
+	border-color: black;
+	background-color: var(--button-color1);
+	font-weight: bold;
+	text-transform: none;
+	border-radius: .5em;
+}
+
+main section:nth-of-type(4) ul li button:hover{
+	background-color: var(--button-hover-background-color1-2);
+}
+
+main section:nth-of-type(4) ul li s {
+	font-family: CeraGR, sans-serif;
+	color: red;
+	font-size: 1em;
+	font-weight: lighter;
+	text-transform: none;
+}
+
+main section:nth-of-type(5) {
+	position: relative;
 	margin-bottom: 2em;
 }
 
-form input[type="email"] {
-	font-family: CeraPro, sans-serif;
-	padding: .65em 5em .7em 1em;
-	margin-right: -2em;
-	border: 1px solid black;
-}
-
-/*extra bij forms*/
-form input[type="email"]::-webkit-search-clear-button {
-    -webkit-appearance: button;
-    color: red; /* You can set the color here, but it may not work in all browsers */
-}
-
-footer button {
-	padding: 0.6em 2em;
+main section:nth-of-type(5) button {
+	position: absolute;
 	text-align: center;
-	color: var(--color-white);
-	background-color: black;
+	padding: 1.5em;
+	height: 2em;
+	left: 5em;
+	right: 5em;
+	bottom: 2em;
+	line-height: .2em;
+	background-color: var(--button-color1);
 	border: solid .20em black;
 	font-family: CeraGR, sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-footer section ul {
+main section:nth-of-type(5) button:hover {
+	background-color: var(--button-hover-background-color1-2);
+}
+
+main section:nth-of-type(6) {
+    margin: 1em;
+}
+
+main section:nth-of-type(6) ul  {
 	display: flex;
-	flex-direction: row;
+	list-style: none;
+	width: 100%;
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
 	gap: 1em;
-	align-items: center;
-	margin-top: 1.5em;
 	margin-bottom: 1em;
 }
 
-footer section a:focus {
-padding-top: 1em;
+main section:nth-of-type(6) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(6) ul li {
+	list-style: none;
+	border-radius: .5em;
+	flex-direction: column; 
+	display:flex;
+	gap: .1em;
+	position: relative;
+	width: 150px;
+	flex-shrink: 0;
+	margin-bottom: 4em;
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
 }
 
-footer section:nth-of-type(1) img {
-	width: 1.5em;
-}
-
-footer section:nth-of-type(2) h3 {
-	text-align: center;
-	margin-left: 2em;
-	margin-right: 2em;
-	margin-top: 1.5em;
-	font-size: 1em;
+main section:nth-of-type(6) ul li h3{
+	margin-top: .5em;
+	font-family: CeraGR, sans-serif;
+	font-weight: bold;
 	text-transform: none;
 }
 
-footer section:nth-of-type(3) {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-}
-
-
-footer section:nth-of-type(3) img {
-	width: 3.5em;
-	height: auto;
-	margin-top: -1em;
-}
-
-footer section:nth-of-type(3) p {
+main section:nth-of-type(6) ul li p{
 	font-family: CeraGR, sans-serif;
-	color: #5f5f5f;
-	margin-top: 1em;
-	margin-left: .5em;
-	font-weight: bolder;
+	font-size: .7em;
+	right: 0.3em;
+	top: 0.5em;
+	color: var(--color-text);/* TEST NS toegevoegd */
+	background-color: var(--color-background); /* TEST NS toegevoegd */
+	padding: 0.3em 0.8em;
+	font-weight: bold;
+	text-transform: none;
+	position: absolute;
 }
 
-footer section:nth-of-type(4) {
-	margin-bottom: 5em;
+main section:nth-of-type(6) ul li button{
+	position: absolute;
+	font-family: CeraGR, sans-serif;
+	margin-top: 22em;
+	font-size: .7em;
+	padding: 1.2em;
+	width: 150px;
+	word-spacing: .8em;
+	border-color: black;
+	background-color: var(--button-color1);
+	color: black;
+	font-weight: bold;
+	text-transform: none;
+	border-radius: .5em;
+}
+
+main section:nth-of-type(6) ul li button:hover{
+	background-color: var(--button-hover-background-color1-2);
+}
+
+main section:nth-of-type(6) ul li s {
+	font-family: CeraGR, sans-serif;
+	color: var(--color-sale); 	/* TEST NS */
+	font-size: 1em;
+	font-weight: lighter;
+	text-transform: none;
+}
+
+main section:nth-of-type(7) {
+	position: relative;
+	margin-bottom: 2em;
 }
 
 
-footer section:nth-of-type(4) p {
+main section:nth-of-type(7) button {
+	position: absolute;
+	text-align: center;
+	padding: 1.5em;
+	height: 2em;
+	left: 4.7em;
+	right: 4.7em;
+	bottom: 1.4em;
+	line-height: .2em;
+	background-color: var(--button-color1);
+	border: solid .20em black;
+	font-family: CeraGR, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+main section:nth-of-type(7) button:hover{
+	background-color: var(--button-hover-background-color1-2);
+}
+
+/*tekst op foto screenreader*/
+section:nth-of-type(8) p {
+	display: none;
+}
+
+main section:nth-of-type(9) {
+    margin: 1em;
+}
+
+main section:nth-of-type(9) ul  {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 1.5em;
-	line-height: 0em;
+	list-style: none;
+	width: 100%;
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	gap: 1em;
+	margin-bottom: 1em;
 }
 
-/*FOOTER EIND*/
+main section:nth-of-type(9) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(9) ul li {
+	list-style: none;
+	border-radius: .5em;
+	flex-direction: column; 
+	display:flex;
+	gap: .1em;
+	position: relative;
+	width: 150px;
+	flex-shrink: 0;
+	margin-bottom: 4em;
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
+}
+
+main section:nth-of-type(9) ul li h3{
+	margin-top: .5em;
+	font-family: CeraGR, sans-serif;
+	font-weight: bold;
+	text-transform: none;
+}
+
+main section:nth-of-type(9) ul li p{
+	font-family: CeraGR, sans-serif;
+	font-size: .7em;
+	right: 0.3em;
+	top: 0.5em;
+	color: var(--color-text);/* TEST NS toegevoegd */
+	background-color: var(--color-background); /* TEST NS toegevoegd */
+	padding-left: .8em;
+	padding-right: .8em;
+	padding-top: .3em;
+	padding-bottom: .3em;
+	font-weight: bold;
+	text-transform: none;
+	position: absolute;
+}
+
+main section:nth-of-type(9) ul li button{
+	position: absolute;
+	font-family: CeraGR, sans-serif;
+	margin-top: 22em;
+	font-size: .7em;
+	padding: 1.2em;
+	width: 150px;
+	word-spacing: .8em;
+	border-color: black;
+	background-color: var(--button-color1);
+	font-weight: bold;
+	text-transform: none;
+	border-radius: .5em;
+}
+
+main section:nth-of-type(9) ul li button:hover{
+	background-color: var(--button-hover-background-color1-2);
+}
+
+main section:nth-of-type(9) ul li s {
+	font-family: CeraGR, sans-serif;
+	color: red;
+	font-size: 1em;
+	font-weight: lighter;
+	text-transform: none;
+}
+
+h1 {
+	font-family: CeraGR, sans-serif;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--color-text); 	/* TEST NS */
+}
+
+main section:nth-of-type(10)  {
+	position: relative;
+}
+
+main section:nth-of-type(10) p {
+	font-family: CeraPro, sans-serif;
+	font-size: 0.9em;
+	text-align: center;
+	margin-top: 1.5em;
+	margin-left: 1.8em;
+	margin-right: 1.8em;
+	color: var(--color-text); 	/* TEST NS */
+}
+
+
+main section:nth-of-type(10) button {
+	position: absolute;
+	text-align: center;
+	padding: 1.5em;
+	height: 2em;
+	left: 4.7em;
+	right: 4.7em;
+	bottom: -4.5em;
+	line-height: .2em;
+	background-color: var(--button-color1);
+	border: solid .20em black;
+	font-family: CeraGR, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+main section:nth-of-type(10) button:hover{
+	background-color: var(--button-hover-background-color1-2);
+}
+
+section:nth-of-type(11) h2 {
+	margin-top: 4em;
+	text-align: center;
+	font-family: CeraGR, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 1em;
+	color:var(--color-text)/* TEST NS */
+}
+
+main section:nth-of-type(11) ul  {
+	display: flex;
+	list-style: none;
+	width: 100%;
+    align-items: flex-start;
+	/* https://codepen.io/newinweb/pen/EpPgdR */
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	gap: .2em;
+	margin-bottom: 1em;
+}
+
+main section:nth-of-type(11) ul::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.) */
+	}
+
+main section:nth-of-type(11) ul li {
+	list-style: none;
+	border-radius: none;
+	flex-direction: column; 
+	display:flex;
+	position: relative;
+	width: calc(33% - 0.1em);
+	flex-shrink: 0;
+	/* nieuwe code */
+	scroll-snap-stop: always;
+	scroll-snap-align: center;
+}
+
+main section:nth-of-type(11) img {
+    width: 100%;
+	aspect-ratio: 1 / 1;
+    object-fit: cover;
+	border-radius: 0;
+}
+
+main section:nth-of-type(12)  {
+	position: relative;
+    display: grid;
+    place-items: center;
+    margin-bottom: 5em;
+}
+
+main section:nth-of-type(12) button {
+	position: absolute;
+	text-align: center;
+	padding: 1.5em;
+	height: 2em;
+	left: 4.7em;
+	right: 4.7em;
+	bottom: -3.5em;
+	line-height: .2em;
+	color: var(--color-white);
+	background-color: var(--button-color2);
+	border: solid .20em black;
+	font-family: CeraGR, sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+main section:nth-of-type(12) button:hover{
+	background-color: var(--button-hover-background-color1-2);
+}
+
+
+/* main section:nth-of-type(14) {
+	content: "";
+	display: block;
+	border-bottom: 1px solid #000;
+	margin-top: 4em;
+} */
+
+
+

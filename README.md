@@ -309,17 +309,19 @@ Deze heb ik met de studentassistent gevonden en vertel ik meer over bij de versl
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/gelukthamburger.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/geluktmarquee.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/geluktslider.jpg" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik heb veel dingen geleerd als het gaat om coderen, vorig jaar snapte ik niet precies wat ik allemaal aan het doen was alleen nu heb ik alles veel beter door. Ik vind het nu zelfs leuk om te doen. Ik ben trots op de marquee, deze is erg goed gelukt. Verder is de fotoslider ook goed gelukt al zeg ik het zelf. Ook vind ik het leuk om te zien dat het gelukt is om een hamburgermenu te maken en die ook echt werkend te maken met javascript
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
-
+  <img src="readme-images/nietzoeken.jpg" width="375px" alt="top">
+  <img src="readme-images/niethover.jpg" width="375px" alt="top">
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik had graag een animatie willen uitwerken waarbij het zoeken werkt. Dit wilde ik met input forms doen, alleen heb ik hier geen tijd meer voor gehad om dit uit te voeren. Verder had ik nu op mijn buttons een roze kleur in de hover, alleen lukte het niet om deze in de :root aan te spreken met een algemene hover, daaorm heb ik die apart in elke css erbij moeten zetten. 
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
