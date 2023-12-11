@@ -175,13 +175,13 @@ a {
 	border: 2px solid var(--form-focus-border-color);
 	}
 
-  nav ul li a:hover {
+  header nav ul li a:hover {
 	text-decoration:none;
 	text-decoration-thickness:none;
 	text-underline-offset:none;
   }
 
-  nav ul li a:visited {
+  header nav ul li a:visited {
 	color: unset;
   }
 
@@ -293,6 +293,7 @@ header nav>section {
 
 header nav>section.showMenu {
 	left: 0;
+	overflow-y: scroll;
 }
 
 header nav>section>section:first-of-type{
@@ -322,7 +323,6 @@ header nav>section {
 /* Bij iedere section behalve de bovenste balk komt er witruimte links en rechts */
 header nav>section>*:not(section:first-of-type) {
 	margin: 0 1em;
-	font-family: Cerapro, sans-serif;
 }
 
 /* De bovenste 3 afbeeldingen naast elkaar zetten */
@@ -330,11 +330,13 @@ header nav>section>section:nth-of-type(2) {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 0.6em;
+	margin-bottom: 1em;
 }
 
 /*1/1 van eerste lijn tot laatste lijn in grid*/
 header nav>section>section:nth-of-type(2) h2 {
 	grid-column: 1/-1;
+	font-family: Cerapro, sans-serif;
 }
 
 header nav>section>section:nth-of-type(2) img {
@@ -349,6 +351,79 @@ header nav>section>section:nth-of-type(2) p {
 	height: fit-content;
 	margin: 0.5em .5em 0 .5em;
 }
+
+
+
+/* UITKLAP CSS BEGIN */
+
+header details summary {
+	font-size: .9em;
+	color: #444444;
+}
+	
+header details {
+font-size: 1em;
+padding: 0.7em 0 0.1em 0;
+font-weight: 600;
+border-bottom: 0.01em solid black;
+transition: .3s ease-in;
+font-family: Gotham, sans-serif;
+color: #444444;
+}
+
+header details:nth-of-type(1){
+	border-top: 0.01em solid black;
+}
+
+header details[open] {
+	padding: 1em 0 1em;
+}
+
+header details ul li a {
+	line-height: 2.5em;
+	font-weight: 700;
+	font-size: .7em;
+}
+
+header summary::-webkit-details-marker {
+	display: none;
+}
+
+header summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1em;
+	list-style: none;
+}
+
+header summary::after ul li {
+	font-size: 1em;
+}
+
+header summary::after {
+	content: "+";
+	font-weight: 400;
+	font-size: 1em;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2em;
+	aspect-ratio: 1;
+	transition: .3s ease-out;
+}
+
+header details[open] summary::after {
+	content: "-";
+}
+
+
+/* UITKLAP CSS EIND */
+
+
+
 /*EINDE HEADER*/
 
 /*FOOTER BEGIN*/
@@ -392,6 +467,7 @@ form input[type="email"] {
 	border: 1px solid black;
 }
 
+/*extra bij forms*/
 form input[type="email"]::-webkit-search-clear-button {
     -webkit-appearance: button;
     color: red; /* You can set the color here, but it may not work in all browsers */
