@@ -325,7 +325,7 @@ Deze heb ik met de studentassistent gevonden en vertel ik meer over bij de versl
   ### Dit was lastig/Is niet gelukt:
   Ik had graag een animatie willen uitwerken waarbij het zoeken werkt. Dit wilde ik met input forms doen, alleen heb ik hier geen tijd meer voor gehad om dit uit te voeren. Verder had ik nu op mijn buttons een roze kleur in de hover, alleen lukte het niet om deze in de :root aan te spreken met een algemene hover, daaorm heb ik die apart in elke css erbij moeten zetten. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+
 </details>
 
 
